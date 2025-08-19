@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroGuardian</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- TensorFlow.js + PoseNet -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.1"></script>
+
+  <!-- Your app logic -->
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h1>NeuroGuardian</h1>
+
+  <!-- video container -->
+  <div id="videoContainer" style="display:inline-block; position:relative;">
+    <video id="webcam" width="640" height="480" autoplay muted playsinline></video>
+  </div>
+
+  <br/>
+
+  <!-- control + status -->
+  <button id="startButton">Start Monitoring</button>
+  <div id="status">Status: Not Monitoring</div>
+
+  <!-- your custom alarm -->
+  <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+</body>
+</html>
